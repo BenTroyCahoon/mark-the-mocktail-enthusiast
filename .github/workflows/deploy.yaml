@@ -1,0 +1,28 @@
+name: Deployment
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+      - name: Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v3 #this is also a pre-defined action
+        with:
+          node-version: 20
+      - name: NPM Install #we now need to install all our dependencies in this environment
+        run: npm ci #npm clean install - does not write to package.json
+      - name: Build applications
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

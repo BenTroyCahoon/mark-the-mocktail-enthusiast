@@ -1,0 +1,16 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.drink-name {
+  cursor: pointer;
+  flex-grow: 1;
+  padding: 16px 0;
+}
+
+.crossed-over {
+  text-decoration: line-through;
+}
