@@ -12,6 +12,7 @@ function App() {
   );
   const [activeFilter, setActiveFilter] = useState(() => (drink) => drink); //returns a 1 to 1 function
 secret key = 123,
+  console.log(" hejsan hoppsan")
   
   console.log()
   useEffect(() => {
