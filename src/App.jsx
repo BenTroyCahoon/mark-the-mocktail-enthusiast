@@ -17,6 +17,8 @@ secret key = 123,
   console.log("C.R.E.A.M")
   
   console.log()
+
+  //shitEffect(()=> shit and piss)
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
